@@ -88,13 +88,13 @@
                 </div>
                 <div>
                     <form action="/">
-                        <input type="number" name="size" value="{{ Request::get('size') ?? 10 }}">
+                        <input type="number" min="1" max="50" name="size" value="{{ Request::get('size') ?? 10 }}">
                         <button type="submit">Show!</button>
                     </form>
                 </div>
 
                 <div class="output">
-                    {!! dd($spiral) !!}
+                    <pre>{{ $spiral }}</pre>
                 </div>
 
             </div>

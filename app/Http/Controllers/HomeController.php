@@ -51,13 +51,10 @@ class HomeController extends Controller
                 $temp .= $spiral[$i][$j] . ' ';
 
                 if ($j == $size - 1) {
-//                    dump($temp);
                     $temp .= PHP_EOL;
                 }
             }
         }
-
-//        dd($temp);
 
         return view('welcome', [
             'spiral' => $temp
